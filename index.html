@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 
   <head>
@@ -8,7 +8,7 @@
     BODY {
   align-items: center;
   justify-content: center;
-  background: black;
+  background: white;
   font-family: Georgia;
   }
 
@@ -26,31 +26,26 @@ H1 {
     }
   {
    </style>
-  <script>
-function func(){
-var n;
-var m;
-n=document.getElementById("n_znach").value;
-m=document.getElementById("m_znach").value;
-n=n+m;
-document.getElementById("a").innerHTML ="<h1>"+"Имя мне легион, ибо нас много "+"<br>"+ n+"</h1>";
-
-n=Number(document.getElementById("n_znach").value);
-m=Number(document.getElementById("m_znach").value);
-n=n+m;
-document.getElementById("a").innerHTML = document.getElementById("a").innerHTML + "<h1>"+"пищеварительная система брюхоногих моллюсков "+"<br>"+ n+"</h1>";
-}
-</script>
-  </head>
-  <body>
-    <h1>Григорий,заводи,смэрт шкiле</h1>
-    n=<input type="text" value="0" id="n_znach">
-    m=<input type="text" value="0" id="m_znach">
-<br>
-<br>
-<button onclick="func()">Нажми на меня</button>
-<br>
-<br>
-<div id="a"></div>
-  </body>
-</html>
+ <script> 
+ function func1(){ 
+ var a;
+ a=Number(document.getElementById("a_znach").value);
+ document.getElementById("kont_a").innerHTML ="<h1>"+"Периметр"+"<br>"+ a*4+"</h1>";
+ }
+ function func2(){
+var r;
+ r=Number(document.getElementById("b_znach").value);
+ document.getElementById("b").innerHTML ="<h1>"+"Диаметр"+"<br>"+ r*2+"</h1>";
+ }
+ </script>
+ </head>
+ <body>
+  <h1>Задача 1.25</h1>
+  Сторона квадрата a=<input type="text" value="0" id="a_znach">
+  <button onclick="func1()">1.25</button>
+  <div id="kont_a"></div>
+  <h1>Задача 1.26</h1>
+  Радиус r=<input type="text" value="0" id="b_znach">
+  <button onclick="func2()">1.26</button>
+  <div id="b"></div> </body> 
+ </html>
