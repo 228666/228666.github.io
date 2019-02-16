@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
   <head>
@@ -8,7 +8,7 @@
     BODY {
   align-items: center;
   justify-content: center;
-  background: purple;
+  background: white;
   font-family: Georgia;
   }
 
@@ -30,28 +30,29 @@ H1 {
  function func1(){ 
  var a;
  a=Number(document.getElementById("a_znach").value);
- document.getElementById("kont_a").innerHTML ="<h1>"+"Периметр"+"<br>"+ a*4+"</h1>";
- }
- function func2(){
-var r;
- r=Number(document.getElementById("b_znach").value);
-    
- }
- 
-  function func3(){
-    var g;
-    g=Number(document.getElementById("g_znach").value)
-    var eee = Math.sqrt((g*g)+(6350*6350));
-    
+ var b = (a-(a%10))/10
+ document.getElementById("kont_a").innerHTML ="<h1>"+"десятки"+"<br>"+ b +"</h1>";
+ var c = (a%10)
+document.getElementById("kont_a").innerHTML =document.getElementById("kont_a").innerHTML + "<h1>"+"единицы"+"<br>"+ c + "</h1>";
+ document.getElementById("kont_a").innerHTML =document.getElementById("kont_a").innerHTML + "<h1>"+"сумма"+"<br>"+ (b+c) + "</h1>";
+document.getElementById("kont_a").innerHTML =document.getElementById("kont_a").innerHTML + "<h1>"+"произведение"+"<br>"+ (b*c) + "</h1>";
+}
+function func2(){
+var d;
+d=Number(document.getElementById("d_znach").value);
+var b = (d-(d%10))/10
+var c =(d%10)
+document.getElementById("d").innerHTML = "<h1>"+"новое число"+"<br>"+ c+b+"</h1>";
+}
  </script>
  </head>
  <body>
-  <h1>Задача 1.25</h1>
-  Сторона квадрата a=<input type="text" value="0" id="a_znach">
-  <button onclick="func1()">1.25</button>
+  <h1>Задача 2.10</h1>
+  двузначное число a=<input type="text" value="34" id="a_znach">
+  <button onclick="func1()">2.10</button>
   <div id="kont_a"></div>
-  <h1>Задача 1.26</h1>
-  Радиус r=<input type="text" value="0" id="b_znach">
-  <button onclick="func2()">1.26</button>
-  <div id="b"></div> </body> 
+  <h1>Задача 2.11</h1>
+  двузначное число d=<input type="text" value="45" id="d_znach">
+  <button onclick="func2()">2.11</button>
+  <div id="d"></div> </body> 
  </html>
