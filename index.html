@@ -1,58 +1,127 @@
-<!DOCTYPE html>
-<html>
+<!doctype html> 
+<html> 
+<head> 
+<title>canvasExample</title> 
+<meta charset='utf-8' /> 
+<style> 
+a.button.purple { 
+background: #e8c4e4; 
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e8c4e4), to(#d698d0)); 
+background: -moz-linear-gradient(#e8c4e4, #d698d0); 
+background: linear-gradient(#e8c4e4, #d698d0); 
+border: solid 1px #da9fd4; 
+border-bottom: solid 3px #946890; 
+box-shadow: inset 0 0 0 1px #f2dcef; 
+color: #7b5777; 
+text-shadow: 0 1px 0 #eacae6; } 
 
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <style>
-    BODY {
-  align-items: center;
-  justify-content: center;
-  background: white;
-  font-family: Georgia;
-  }
+a.button.purple:hover { 
+background: #daa2d4; 
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#daa2d4), to(#e0b1db)); 
+background: -moz-linear-gradient(#daa2d4, #e0b1db); 
+background: linear-gradient(#daa2d4, #e0b1db); 
+border: solid 1px #ca91c4; 
+border-bottom: solid 3px #946890; 
+box-shadow: inset 0 0 0 1px #e9c7e6; } 
 
-H1 {
-  font-size: 30px;
-  font-weight: normal;
-  cursor: pointer;
-  text-shadow: 0 0 15px #999;
-  color: transparent;
-  transition: all .5s;
-  }
-  H1:hover {
-    text-shadow: 0 0 0px #333;
-    cursor: pointer;
-    }
-  {
-   </style>
- <script> 
- function func1(){ 
- var a;
- a=Number(document.getElementById("a_znach").value);
- var b = (a-(a%10))/10
- document.getElementById("kont_a").innerHTML ="<h1>"+"десятки"+"<br>"+ b +"</h1>";
- var c = (a%10)
-document.getElementById("kont_a").innerHTML =document.getElementById("kont_a").innerHTML + "<h1>"+"единицы"+"<br>"+ c + "</h1>";
- document.getElementById("kont_a").innerHTML =document.getElementById("kont_a").innerHTML + "<h1>"+"сумма"+"<br>"+ (b+c) + "</h1>";
-document.getElementById("kont_a").innerHTML =document.getElementById("kont_a").innerHTML + "<h1>"+"произведение"+"<br>"+ (b*c) + "</h1>";
+a.button.purple:active { 
+background: #d49ace; 
+background: -webkit-gradient(linear, 0 0, 0 bottom, from(#d49ace), to(#cc94c6)); 
+background: -moz-linear-gradient(#d49ace, #cc94c6); 
+background: linear-gradient(#d49ace, #cc94c6); 
+border: solid 1px #8e678a; 
+box-shadow: inset 0 10px 15px 0 #ba87b5; } 
+</style> 
+<script> 
+
+function er1(){ 
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+if (x <= -2 && y>=1) {
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
 }
-function func2(){
-var d;
-d=Number(document.getElementById("d_znach").value);
-var b = (d-(d%10))/10
-var c =(d%10)
-document.getElementById("d").innerHTML = "<h1>"+"новое число"+"<br>"+ c+b+"</h1>";
+} 
+ function er2(){  
+y=Number(document.getElementById("y_znach").value); 
+if (y >= 1.5 && y>=-2) {
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
 }
- </script>
- </head>
- <body>
-  <h1>Задача 2.10</h1>
-  двузначное число a=<input type="text" value="34" id="a_znach">
-  <button onclick="func1()">2.10</button>
-  <div id="kont_a"></div>
-  <h1>Задача 2.11</h1>
-  двузначное число d=<input type="text" value="45" id="d_znach">
-  <button onclick="func2()">2.11</button>
-  <div id="d"></div> </body> 
- </html>
+} 
+function er3(){ 
+x=Number(document.getElementById("x_znach").value);
+y=Number(document.getElementById("y_znach").value); 
+if (y >=2 && y>=4 && x>1) {
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+} 
+function er4(){ 
+x=Number(document.getElementById("x_znach").value);
+y=Number(document.getElementById("y_znach").value); 
+if (y >=2 && y<=4 && x>1) {
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+} 
+
+function er5(){ 
+x=Number(document.getElementById("x_znach").value);
+y=Number(document.getElementById("y_znach").value); 
+if (y >=0 && x>=2 || y=<-1 && y=<-2 && x=>1 && x=>3) {
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+}
+
+function er6(){ 
+x=Number(document.getElementById("x_znach").value);
+y=Number(document.getElementById("y_znach").value); 
+if (y >=1 && x>=2 || y=<-1.5 && y=<-2 && x=>2) {
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+} 
+
+function er7(){ 
+x=Number(document.getElementById("x_znach").value);
+y=Number(document.getElementById("y_znach").value); 
+if (x >=1 && x<=3 && y=<-1 && y>=-2 &&) {
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+}
+</script> 
+</head> 
+<body>
+
+
+x=<input type="text" value="0" id="x_znach"> <br>
+y=<input type="text" value="0" id="y_znach"> <br>
+
+
+<a href="#" onclick="er1()" class="button blue">3.32а</a> 
+<a href="#" onclick="er2()" class="button pink">3.32б</a> 
+<a href="#" onclick="er3()" class="button yellow">3.32в</a> 
+<a href="#" onclick="er4()" class="button white">3.32г</a> 
+<a href="#" onclick="er5()" class="button white">3.32д</a>
+<a href="#" onclick="er5()" class="button white">3.32е</a>
+<a href="#" onclick="er5()" class="button white">3.32ж</a>
+<br> 
+
+<br> 
+
+<div id="otvet"></div>
+</body> 
+
+</html>
+
+
