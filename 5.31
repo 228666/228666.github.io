@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<script>
+function func1() {
+var n = Number(document.getElementById("a_f1_znach").value);
+var s = 0;
+var i=n;
+while (i <= 2*n) {
+s=s+i*i;
+document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i*i +" "+s + "<br> ";
+i++;
+}}
+
+</script>
+</head>d
+
+<body>
+
+<h1>5.31</h1> n=
+<input type="text" value="6" id="a_f1_znach">
+
+<a href="#" onclick="func1()" class="button red text-blanco text-shadow-negra">5.31</a>
+<div id="otvet1"></div>
+<br>
+<br>
+
+<br>
+<br>
+</body>
+</html>
+ 
+Ещё
