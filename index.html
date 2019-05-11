@@ -1,85 +1,68 @@
-<html> 
+<html>
 
-<head> 
-<link rel="stylesheet" href="style.css"> 
-<script> 
-function func1() { 
-x = Number(document.getElementById("n_f-1_znach").value); 
-y = Number(document.getElementById("n_f-2_znach").value); 
-var i = x; b = y; sum = i; 
-while (i < b) { 
-i++; 
-sum = sum + i; 
-} 
-document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + sum + " "; 
-} 
-function func2() { 
-z = Number(document.getElementById("n_f-3_znach").value); 
-r = Number(document.getElementById("n_f-4_znach").value); 
-var f = z; q = r; div = f; 
-while (f < q) { 
-f++; 
-div = div * f; 
-} 
-document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML + div + " "; 
-} 
-function func3() { 
-z = Number(document.getElementById("n_f-5_znach").value); 
-r = Number(document.getElementById("n_f-6_znach").value); 
-var f = z; q = r; div = f;diver = (r-z)+1
-while (f < q) { 
-f++; 
-div = div + f; 
-} 
-document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + (div/diver) + " "; 
-} 
-function func4() { 
-z = Number(document.getElementById("n_f-7_znach").value); 
-r = Number(document.getElementById("n_f-8_znach").value); 
-var f = z; q = r; div = f*f; 
-while (f < q) { 
-f++; 
-div = div + (f*f); 
-} 
-document.getElementById("otvet4").innerHTML = document.getElementById("otvet4").innerHTML + div + " "; 
-} 
-</script> 
-</head> 
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function func1() {
+      var i = 0; 
+      var m = 0;
+      var q = 7;
+      var u = 0;
+      while (q != 0) {
+        i++;
+        q =Number(prompt('Введите n', 0))
+        m = m + q
+        u = u + 1
+      }
+      document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + m + " " + u + " " + (m/u);
+    }
 
-<body> 
+    function func2() {
+      n = Number(document.getElementById("n_f2_znach").value);
+      var i = 2; 
+      while (i*i < n) {
+        i++;
+      }
+      document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML + i*i + " ";
+    }
+
+    function func3() {
+      n = Number(document.getElementById("n_f3_znach").value);
+      var i = 2; m = 0;
+      while (i*i < n) {
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + i + " ";
+        i++;
+      }
+    }
+  </script>
+</head>
+
+<body>
 
 
-<h1>Цикл while! 5.27 Г</h1> 
-<input type="text" value="6" id="n_f-1_znach"> 
-<input type="text" value="6" id="n_f-2_znach"> 
-<a href="#" onclick="func1()" class="button green text-blanco text-shadow-negra">☬ </a> 
-<div id="otvet1"></div> 
-<br> 
-<br> 
-<br> 
-<br> 
-<h1>Цикл while! 5.28 Г</h1> 
-<input type="text" value="6" id="n_f-3_znach"> 
-<input type="text" value="6" id="n_f-4_znach"> 
-<a href="#" onclick="func2()" class="button red text-blanco text-shadow-negra">☭</a> 
-<div id="otvet2"></div> 
-<br> 
-<br> 
-<br> 
-<br> 
-<h1>Цикл while! 5.29 Г</h1> 
-<input type="text" value="6" id="n_f-5_znach"> 
-<input type="text" value="6" id="n_f-6_znach"> 
-<a href="#" onclick="func3()" class="button yellow text-blanco text-shadow-negra"> ☢</a> 
-<div id="otvet3"></div> 
-<br> 
-<br> 
-<br> 
-<br> 
-<h1>Цикл while! 5.30 Г</h1> 
-<input type="text" value="6" id="n_f-7_znach"> 
-<input type="text" value="6" id="n_f-8_znach"> 
-<a href="#" onclick="func4()" class="button black text-blanco text-shadow-negra">☯</a> 
-<div id="otvet4"></div> 
-</body> 
+  <h1>Цикл while!</h1> n=
+  <input type="text" value="6" id="n_f1_znach">
+  <a href="#" onclick="func1()" class="button red text-blanco text-shadow-negra"> ℘ </a>
+  <div id="otvet1"></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл Do while</h1> n=
+  <input type="text" value="6" id="n_f2_znach">
+  <a href="#" onclick="func2()" class="button yellow text-blanco text-shadow-negra">ሎ </a>
+  <div id="otvet2"></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл for</h1> n=
+  <input type="text" value="9" id="n_f3_znach">
+  <a href="#" onclick="func3()" class="button green text-blanco text-shadow-negra">ᛤ</a>
+  <div id="otvet3"></div>
+<br>
+  <br>
+  <br>
+  <br>
+</body>
 </html>
